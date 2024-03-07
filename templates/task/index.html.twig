@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ajouter une tache{% endblock %}
+
+{% block body %}
+    {{form_start(form)}}
+        <h1>Ajouter une tache : </h1>
+        {{form_label(form.title)}}
+        {{form_widget(form.title)}}
+
+        {{form_label(form.content)}}
+        {{form_widget(form.content)}}
+
+        {{form_label(form.expireDate)}}
+        {{form_widget(form.expireDate)}}
+
+        {{form_label(form.statut)}}
+        {{form_widget(form.statut)}}
+
+        <input type="submit" value="Ajouter"/>
+    {{form_end(form)}}
+{% endblock %}
