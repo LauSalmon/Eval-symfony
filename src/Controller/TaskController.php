@@ -55,4 +55,14 @@ class TaskController extends AbstractController
         ]);
     }
 
+    #[Route('/task/all', name: 'app_task_all')]
+    public function taskAll(): Response
+    {
+        $tasks= $this->taskRepository->findAll();
+
+        return $this->render('task/task_all.html.twig', [
+            'tasks' => $tasks,
+        ]);
+    }
+
 }
