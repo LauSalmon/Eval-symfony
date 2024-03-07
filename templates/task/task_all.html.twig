@@ -3,13 +3,18 @@
 {% block title %}Liste des articles{% endblock %}
 
 {% block body %}
-
+<li>
     {% for task in tasks %}
-    {{task.title}}
-    {{task.content}}
-    {{task.expireDate | date('d/m/Y')}}
-    {{task.statut}}
+    <ul>
+        {{task.title}}
+        {{task.content}}
+        {{task.expireDate | date('d/m/Y')}}
+        {{task.statut}}        
+    </ul>
 
-    {% endfor %}
+
+    {% endfor %}    
+</li>
+
 
 {% endblock %}
